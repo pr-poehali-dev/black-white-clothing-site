@@ -43,12 +43,22 @@ const Index = () => {
                 <a href="#home" className="text-black hover:text-gray-600">Главная</a>
                 <a href="#catalog" className="text-black hover:text-gray-600">Каталог</a>
                 <a href="#collections" className="text-black hover:text-gray-600">Коллекции</a>
+                <a href="#ui-kit" className="text-black hover:text-gray-600">UI-Kit</a>
                 <a href="#about" className="text-black hover:text-gray-600">О бренде</a>
                 <a href="#blog" className="text-black hover:text-gray-600">Блог</a>
                 <a href="#contact" className="text-black hover:text-gray-600">Контакты</a>
               </div>
             </div>
             <div className="flex items-center space-x-4">
+              <a 
+                href="https://www.figma.com/design/fashion-store" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hidden sm:flex items-center space-x-2 px-3 py-1 border border-black hover:bg-black hover:text-white transition-colors"
+              >
+                <Icon name="Figma" size={16} />
+                <span className="text-sm">Figma</span>
+              </a>
               <Icon name="Search" size={20} />
               <Icon name="Heart" size={20} />
               <Icon name="ShoppingBag" size={20} />
@@ -117,6 +127,128 @@ const Index = () => {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* UI-Kit Section */}
+      <section id="ui-kit" className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-black mb-4">UI-Kit</h2>
+            <p className="text-gray-600 text-lg mb-8">Система компонентов нашего дизайна</p>
+            <a 
+              href="https://www.figma.com/design/fashion-store" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center space-x-3 px-6 py-3 border-2 border-black hover:bg-black hover:text-white transition-all duration-300"
+            >
+              <Icon name="Figma" size={20} />
+              <span className="font-semibold">Открыть в Figma</span>
+              <Icon name="ExternalLink" size={16} />
+            </a>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* Typography */}
+            <div className="space-y-8">
+              <div>
+                <h3 className="text-2xl font-bold text-black mb-6">Типографика</h3>
+                <div className="space-y-4 p-6 border border-gray-200">
+                  <h1 className="text-4xl font-light text-black">Heading 1</h1>
+                  <h2 className="text-3xl font-semibold text-black">Heading 2</h2>
+                  <h3 className="text-2xl font-medium text-black">Heading 3</h3>
+                  <p className="text-lg text-gray-600">Body Large</p>
+                  <p className="text-base text-gray-600">Body Regular</p>
+                  <p className="text-sm text-gray-500">Body Small</p>
+                </div>
+              </div>
+
+              {/* Buttons */}
+              <div>
+                <h3 className="text-2xl font-bold text-black mb-6">Кнопки</h3>
+                <div className="space-y-4 p-6 border border-gray-200">
+                  <div className="flex flex-wrap gap-4">
+                    <Button size="lg">Primary Large</Button>
+                    <Button>Primary</Button>
+                    <Button size="sm">Primary Small</Button>
+                  </div>
+                  <div className="flex flex-wrap gap-4">
+                    <Button variant="outline" size="lg">Outline Large</Button>
+                    <Button variant="outline">Outline</Button>
+                    <Button variant="outline" size="sm">Outline Small</Button>
+                  </div>
+                  <div className="flex flex-wrap gap-4">
+                    <Button variant="ghost" size="lg">Ghost Large</Button>
+                    <Button variant="ghost">Ghost</Button>
+                    <Button variant="ghost" size="sm">Ghost Small</Button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Colors & Components */}
+            <div className="space-y-8">
+              {/* Colors */}
+              <div>
+                <h3 className="text-2xl font-bold text-black mb-6">Цветовая палитра</h3>
+                <div className="grid grid-cols-2 gap-4 p-6 border border-gray-200">
+                  <div className="space-y-2">
+                    <div className="w-full h-16 bg-black"></div>
+                    <p className="text-sm text-gray-600">#000000<br />Primary Black</p>
+                  </div>
+                  <div className="space-y-2">
+                    <div className="w-full h-16 bg-white border border-gray-200"></div>
+                    <p className="text-sm text-gray-600">#FFFFFF<br />Primary White</p>
+                  </div>
+                  <div className="space-y-2">
+                    <div className="w-full h-16 bg-gray-100"></div>
+                    <p className="text-sm text-gray-600">#F5F5F5<br />Light Gray</p>
+                  </div>
+                  <div className="space-y-2">
+                    <div className="w-full h-16 bg-gray-600"></div>
+                    <p className="text-sm text-gray-600">#6B7280<br />Medium Gray</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Form Elements */}
+              <div>
+                <h3 className="text-2xl font-bold text-black mb-6">Формы</h3>
+                <div className="space-y-4 p-6 border border-gray-200">
+                  <Input placeholder="Input field" />
+                  <Input type="email" placeholder="Email field" />
+                  <textarea 
+                    className="w-full p-3 border border-gray-200 rounded-md resize-none h-20" 
+                    placeholder="Textarea"
+                  ></textarea>
+                  <div className="flex items-center space-x-2">
+                    <input type="checkbox" id="checkbox" className="rounded" />
+                    <label htmlFor="checkbox" className="text-sm text-gray-600">Checkbox</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Icons Grid */}
+          <div className="mt-16">
+            <h3 className="text-2xl font-bold text-black mb-6">Иконки</h3>
+            <div className="grid grid-cols-6 md:grid-cols-12 gap-6 p-6 border border-gray-200">
+              {[
+                'Home', 'Search', 'Heart', 'ShoppingBag', 'User', 'Settings',
+                'Mail', 'Phone', 'MapPin', 'Star', 'Plus', 'Minus',
+                'Check', 'X', 'ArrowRight', 'ArrowLeft', 'ArrowUp', 'ArrowDown',
+                'Menu', 'Grid', 'List', 'Filter', 'Sort', 'Download'
+              ].map((iconName) => (
+                <div key={iconName} className="flex flex-col items-center space-y-2">
+                  <div className="w-12 h-12 border border-gray-200 flex items-center justify-center hover:bg-gray-50">
+                    <Icon name={iconName as any} size={20} />
+                  </div>
+                  <span className="text-xs text-gray-500 text-center">{iconName}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
